@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "uibox": "packages/uibox",
+    "uibox-core": "packages/uibox-core"
+  }
 }

@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@jcmtallon/uibox": ["packages/uibox/src/index.ts"],
+      "@jcmtallon/uibox-core": ["packages/uibox-core/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

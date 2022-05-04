@@ -1,0 +1,42 @@
+{
+  "sourceRoot": "packages/uibox/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/uibox",
+        "tsConfig": "packages/uibox/tsconfig.lib.json",
+        "project": "packages/uibox/package.json",
+        "entryFile": "packages/uibox/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "packages/uibox/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/uibox/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/uibox"],
+      "options": {
+        "jestConfig": "packages/uibox/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
